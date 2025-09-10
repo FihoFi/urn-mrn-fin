@@ -3,7 +3,7 @@ Updated: 2025-09-10
 
 ## 1. Purpose and Scope
 
-This specification defines the subnamespace  
+This specification defines the sub-namespace  
 ```
 urn:mrn:fin:navwarn:
 ```
@@ -37,6 +37,8 @@ urn:mrn:fin:navwarn:<producer>:<series>:<year>:<number>
 - `<year>` — four-digit Gregorian year (`YYYY`).  
 - `<number>` — sequential number within the series and year
 
+>[!NOTE]
+>The resource name is formed by providing all defined components, separated by colon. Currently only one producer (FI00) is allowed. Each series must be defined by at least one character or digit, and the year provided using four digits (2025, 2026 etc.). The number may contain only digits.  
 ---
 
 ## 4. Syntax Definition
@@ -130,6 +132,4 @@ NA
 
 ## 12. References
 
-- [RFC 8141: Uniform Resource Names (URNs)](https://www.rfc-editor.org/rfc/rfc8141)  
-- [IANA URN Namespaces Registry](https://www.iana.org/assignments/urn-namespaces/)  
-- [IALA MRN Guidelines](https://www.iala-aism.org/)  
+- https://github.com/FihoFi/urn-mrn-fin/
