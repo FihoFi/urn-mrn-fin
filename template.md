@@ -1,4 +1,4 @@
-# URN:MRN:FIN:NAVWARN:
+# URN:MRN:FIN:<NID>:
 <!--ADD: Date updated-->
 Updated: <YYYY-MM-DD>
 
