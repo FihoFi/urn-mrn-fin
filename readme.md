@@ -59,7 +59,7 @@ urn:mrn:fin:<OSNID>:<OSNS>
 In the URN framework, the colon character (:) is used to separate major components such as the Namespace Identifier (NID), and the Namespace Specific String (NSS). Although colons may also appear within the NSS, they do not automatically create hierarchy. Any structure within the NSS must therefore be explicitly defined in the relevant namespace specification. 
 
 ### Sub-namespaces within the Organization-Specific Namespace String
-**Within urn:mrn:fin, the concept of using colon (:) to organize identifiers into hierarchical sub-namespaces is retained**. This rule applies to all sub-namespaces within urn:mrn:fin.
+**Within urn:mrn:fin, the colon (:) is used to organize identifiers into hierarchical sub-namespaces**. This means, that the left hand side of every colon (:) is both a resource name and a namespace. This rule applies to all sub-namespaces within urn:mrn:fin.
 
 ---
 
@@ -162,48 +162,34 @@ TBD
 
 ---
 
-## 12. Explicit and implicit documentation of namespaces
+## 12. Explicit or implicit documentation of namespaces
 
-**Each namespace, including sub-namespaces, shall have a defined owner, who is responsible for defining the purpose, scope and management of the namespace.**
-
-All namespaces are formally defined using the tempate and including the formal **Augmented Backus–Naur Form (ABNF)**.
+**Each namespace, including sub-namespaces, shall have a defined owner, who is responsible for defining the purpose, scope and management of the namespace.** All namespaces within urn:mrn:fin shall be formally defined using a common template and including the formal **Augmented Backus–Naur Form (ABNF)**.
 
 When a comonent within a definition permits the colon character (:) in its value, this MUST NOT be used in such a way, that a un-documented namespace is formed. Use of the colon (:) is allowed when a sub-namespace is explicitly defined and documented, or implicit within the top-level rule of the definition.
 
 ### Explicit ABNF definition
-In cases where a namespace allows for subsequent namespaces to be created, by defining a component allowing the use of colon (:), each allowed sub-namespace must be explicitly defined according to the rules set up for documenting and defining URN and MRN- namespaces. Each subsequent namespace within such a hierarchy must be explicitly defined as a long as a component accepts the use of colon.
+In cases where a namespace allows for subsequent namespaces to be created, by defining a component allowing the use of colon (:), each allowed sub-namespace must be explicitly defined according to the rules set up for documenting and defining URN and MRN- namespaces. Each subsequent namespace within such a hierarchy must be either explicitlyor implicitly defined before it can be used.
 
 Example:
 ```
-TBD
+TBD 
 ```
 	
 ### Implicit ABNF definition
 Implicit ABNF definition means, that additional sub-namespaces are defined as separate components within the top-level rule of the ABNF definition of a namespace. Implicit definition is used in cases, where a rule-based approach for namespacing is needed. When implicit definition is used, the components cannot allow the use of colon (:) wihtin the string.
 
-Example: The imaginary namespace urn:mrn:fin:enc allows an identifier, that can also serve as a namespace for optional edition and update information. As colon are not allowed within the components themselves, subsequent namespaces cannot be created. The top-level definition should contain the needed guidance on using all the sub-namespaces the definition allows for. 
+Example: The namespace urn:mrn:fin:navwarn implicitly defines sub-namespaces separated by colon (:). The top-level definition should contain the needed guidance on using all the sub-namespaces the definition allows for. 
 
 ```
-; Definition of ENC namespace with optional edition and update components
-URN-MRN-FIN-ENC = "urn:mrn:fin:enc:" identifier [ ":" edition ":" update ]
-
-; ENC chart identifier
-identifier       = alphanum *(31*(alphanum / "-") alphanum)  
-
-; Edition of the ENC chart
-edition          = "ed" 2*DIGIT       
-
-; Update of the ENC chart
-update           = "upd" 2*DIGIT  
-
+fi-navwarn = "urn:mrn:fin:navwarn:" producer ":" series ":" year ":" number
+producer   = "FI00"
+series     = 1*(ALPHA / DIGIT / "-")
+year       = 4DIGIT
+number     = 1*DIGIT
 ```
 
-The implicit definition above allows for:
-•	Identifying an ENC- chart by its identifier
-o	urn:mrn:enc:BOBS34F
-
-•	Identifying a specific edition and update of the chart by adding data. In this case, the chart identifier forms a namespace, that can hold identifiers for edition and update.
-o	urn:mrn:enc:BOBS34F:2:0
+In the example, the resource name "urn:mrn:fin:navwarn:FI00" is also a namespace for resource names identifying series of Navigtional Warnings provided by the producer. Each series similarily becomes a namespace for resource names identifying the years when Navigational Warnings within the series were published etc.
 
 ## 13. References
 
