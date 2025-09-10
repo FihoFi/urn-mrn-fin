@@ -39,10 +39,15 @@ for use in identifying Finnish Maritime Resources.
 - **Contact:** stefan.engstrom@traficom.fi / mikko.hovi@traficom.fi 
 - **Change control:** The namespace owner maintains this specificaton, including changes and the rules for assignment of identifiers.
 
+### Assignment of sub-namespaces to stakeholders
+Sub-namespaces of urn:mrn:fin can be made available for stakeholders based on request, and assigned based on case-by-case consideration.
+>[!NOTE]
+>The application process is initiated by providing an explicit specification of the requested namespace (and any additional sub-namespaces as needed) using the template at: https://github.com/FihoFi/urn-mrn-fin/template.md and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository. 
+
 ---
 
 ## 3. Namespace Structure
-
+//
 **General form:**
 
 ```
