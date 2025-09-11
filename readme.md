@@ -198,6 +198,7 @@ In the example, the resource name "urn:mrn:fin:navwarn:FI00" is also a namespace
 
 ## 13. References
 
+- [RFC 2141: Uniform Resource Names (URNs)]https://www.rfc-editor.org/rfc/rfc2141 (obsoleted by RFC 8141 but referenced in MRN)
 - [RFC 8141: Uniform Resource Names (URNs)](https://www.rfc-editor.org/rfc/rfc8141)  
 - [IANA URN Namespaces Registry](https://www.iana.org/assignments/urn-namespaces/)  
-- [IALA MRN Guidelines](https://www.iala-aism.org/)  
+- [IALA MRN Guidelines]([https://www.iala-aism.org/](https://www.iala.int/technical/data-modelling-mrn/))  
