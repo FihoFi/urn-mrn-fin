@@ -60,7 +60,7 @@ urn:mrn:fin:<OSNID>:<OSNS>
 - `<OSNS>` — Organization-Specific Namespace String
 
 >[!NOTE]
->According to IALA guidance, OID Owners may define further sub-namespaces for representing further internal hierarchies and de-centrally organize the assignment of MRN in these subspaces.
+>According to IALA guidance, the *Organization-Specific Namespace* may define further sub-namespaces for representing further internal hierarchies and de-centrally organize the assignment of MRN in these subspaces.
 In the URN framework, the colon character (:) is used to separate major components such as the Namespace Identifier (NID), and the Namespace Specific String (NSS). Although colons may also appear within the NSS, they do not automatically create hierarchy. Any structure within the NSS must therefore be explicitly defined in the relevant namespace specification. 
 
 ### Sub-namespaces within the Organization-Specific Namespace String
