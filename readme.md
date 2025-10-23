@@ -103,7 +103,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 - **Assignement:** Identifiers (OSNID) are assigned by the owner of urn:mrn:fin
 - **Uniqueness rule:** Each OSNID must be unique, **the use of colon within the OSNS MUST NOT lead to the formation of a sub-namespace that is not documented**.
-- **Documentation:** Each OSNID, and sub-namespace must be documented within the urn:mrn:fin centarl documentation 
+- **Documentation:** Each OSNID, and sub-namespace must be documented within the urn:mrn:fin central documentation 
 - **Persistence:** Identifiers are never reassigned.
 
 >[!NOTE]
@@ -188,13 +188,13 @@ Example: The namespace urn:mrn:fin:navwarn implicitly defines sub-namespaces sep
 
 ```
 fi-navwarn = "urn:mrn:fin:navwarn:" producer ":" series ":" year ":" number
-producer   = "FI00"
+producer   = "FI01"
 series     = 1*(ALPHA / DIGIT / "-")
 year       = 4DIGIT
 number     = 1*DIGIT
 ```
 
-In the example, the resource name "urn:mrn:fin:navwarn:FI00" is also a namespace for resource names identifying series of Navigtional Warnings provided by the producer. Each series similarily becomes a namespace for resource names identifying the years when Navigational Warnings within the series were published etc.
+In the example above, the MRN "urn:mrn:fin:navwarn:FI01" is both a resource name used to identify a producer of Navigational Warnings in Finland, and a namespace for identifiers of Navigtional Warnings provided by the producer. Each series similarily becomes a namespace for resource names identifying the years when Navigational Warnings within the series were published etc.
 
 ## 13. References
 
