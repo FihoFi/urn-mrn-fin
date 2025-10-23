@@ -35,7 +35,7 @@ urn:mrn:fin:navwarn:<producer>:<series>:<year>:<number>
 - `<producer>` — the IHO S-62 / S-100  producer code of the producer (FI01 for Turku Radio / Traficom).  
 - `<series>` — a code defining the series of a Navigational Warning
 - `<year>` — four-digit Gregorian year (`YYYY`).  
-- `<number>` — sequential number within the series and year. Number formatting including the use of leading zeroes must be consistent within each '<year>'.
+- `<number>` — sequential number within the series and year. Number formatting including the use of leading zeroes must be consistent within the parent namespace (year).
 
 >[!NOTE]
 >The resource name is formed by providing all defined components, separated by colon. Currently only one producer (FI01) is recognized. Each series must be defined by at least one character or digit, and the year provided using four digits (2025, 2026 etc.). The number may contain only digits.
