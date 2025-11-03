@@ -1,25 +1,25 @@
-# URN:MRN:FIN:<NID>:
+# URN:MRN:FIN:ATON:
 <!--ADD: Date updated-->
-Updated: <YYYY-MM-DD>
+Updated: 2025-11-03
 
 ## 1. Purpose and Scope
 
 <!--ADD: definitions of the namespace-->
 This specification defines the subnamespace  
 ```
-urn:mrn:fin:<NID><NSS>:
+urn:mrn:fin:aton:
 ```
 for use in identifying XXX.
 
-- **Scope:** Persistent, globally unique identifiers for all XXX.  
-- **Out of scope:** 
+- **Scope:** Persistent, globally unique identifiers for Aids to Navigation and related equipment.  
+- **Out of scope:** Aids to Navigation which are not given an identifier by FTIA and components of equipment not covered within a sub-namespace.
 
 ---
 
 ## 2. Authority
 <!--ADD: owner and point of contact-->
-- **Namespace owner:** XXX  
-- **Contact:** XXX
+- **Namespace owner:** Finnish Transport Infrastructure Agenct (FTIA)  
+- **Contact:** tuomas.martikainen@vayla.fi 
 - **Change control:** The namespace owner maintains this specificaton, including changes and rules for assigning identifiers.
 
 ---
@@ -30,15 +30,16 @@ for use in identifying XXX.
 **General form:**
 
 ```
-<!--ADD: general form description-->
-urn:mrn:fin:navwarn:<NID>:<NSS>
+<!--ADD: general form description
+"urn:mrn:fin:aton:" <aspect> ":" <identifier>
 ```
 
 **Segments:**
 <!--ADD: definition of the segments (components)-->
 
-- `<NID>` - ##DEFINITION_NID##  
-- `<NSS>` - ##DEFINITION_NSS##
+- `<aspect>` - The aspect defines the particular aspect or characteristic of an Aids to NAvigation. The aspect might be identifiaction of the "idea" of the AtoN itself, the structure, equipment or any other component. Only aspects defined within this documentationcan be used.
+  
+- `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managet within an external process. 
 
 ---
 
@@ -48,44 +49,41 @@ urn:mrn:fin:navwarn:<NID>:<NSS>
 
 **ABNF:**
 ```
-SUB-MRN = "urn:mrn:fin:" NID ":" NSS
+mrn-fin-aton = "urn:mrn:fin:aton:" aspect ":" identifier
 
-;Namespace ID (NID)
-NID = alphanum *(31*(alphanum / "-") alphanum)
-       ; 1-32 characters, alphanumeric or hyphen
-       ; Must start and end with alphanumeric
+aspect       = "id" / "light"
+       ; the aspect of an AtoN can include identification of the AtoN itself or any components, equipment or characteristic thereof. 
+       ; list of aspects can be extended by adding to this documentation
 
-; Namespace String (NSS)
-NSS = pchar *(pchar / "/")
-      ; May contain colons (":") to form sub-components
-      ; Despite allowing colon, only explicitly defined sub-namespaces are allowed 
+identifier   = aton-number / light-identifier
+       ; when aspect is id, identifier is an aton-number
+       : when aspect is light, identifier is a light-identifier
 
-; Supporting definitions
-alphanum    = ALPHA / DIGIT
-pchar       = unreserved / pct-encoded / sub-delims / ":" / "@"
-unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
-pct-encoded = "%" HEXDIG HEXDIG
-sub-delims  = "!" / "$" / "&" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
-ALPHA       = %x41-5A / %x61-7A   ; A-Z / a-z
-DIGIT       = %x30-39             ; 0-9
-HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F" 
-                    / "a" / "b" / "c" / "d" / "e" / "f"
+aton-number      = alphanum
+       ; aton-number is used with aspect: id
+       ; the aton-number is the numbr given by FTIA to any AidsToNavigation within the national AtoN- database
+       ; rules for assigning and uniqueness follows those the external process of assigning numbers
+
+light-identifier = alphanum
+       ; light-identifier is used with aspect: light
+       ; the light-identifier is the kinternal number given to a light within the national AtoN- database
+       ; rules for assigning and uniqueness follows those the external process of assigning numbers
 ```
 
 ## 5. Assignment & Uniqueness
 
 <!--ADD: data to replace XXX-->
 
-- **Assignement:** Identifiers are assigned by XXX
-- **Issuing authority:**  XXX 
-- **Uniqueness rule:** XXX  
-- **Persistence:** Identifiers are never reassigned.
+- **Assignement:** Identifiers are assigned by FTIA, mainly corresponding wioth the identifiers assigne in the national AtoN- database. 
+- **Issuing authority:**  Finnish Transport and Infrastructure Agency (FTIA)
+- **Uniqueness rule:**   Identifiers within each sub-namespace (aspect) must point to only one resource, although each reasource may have multiple identifiers. 
+- **Persistence:** Rules for assigining and re-using identifiers of identifiers, follows the rules by the external process within the natinal AtoN- database. 
 
 ---
 
 ## 6. Lifecycle
 
-- **Persistence:** URNs remain valid indefinitely.
+- **Persistence:** URNs remain valid indefinitely, although an assigned URN might point to a resource that is no longer available.
 ---
 
 ## 7. Resolution
@@ -101,6 +99,11 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 ```
 <!--ADD: examples-->
+Identification of Aids to Navigation using the national number:
+urn:mrn:fin:aton:id:12345
+
+Identification of light equipment: 
+urn:mrn:fin:aton:light:98765
 ---
 
 ## 10. Security and Privacy
