@@ -103,6 +103,7 @@ urn:mrn:fin:aton:id:12345
 
 Identification of light equipment: 
 urn:mrn:fin:aton:light:98765
+```
 ---
 
 ## 10. Security and Privacy
