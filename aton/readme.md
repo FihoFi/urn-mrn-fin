@@ -26,16 +26,11 @@ for use in identifying Finnish Aids to Navigation and other aspects related to t
 
 ## 3. Namespace Structure
 
-
 **General form:**
-<!--ADD: general form description
 ```
 "urn:mrn:fin:aton:" <aspect> ":" <identifier>
 ```
-
 **Segments:**
-<!--ADD: definition of the segments (components)-->
-
 - `<aspect>` - The aspect defines the particular aspect or characteristic of an Aids to Navigation. The aspect might be identifiaction of the AtoN itself, or a structure, equipment or any other component or characteristic. Only aspects defined within this documentation can be used.
   
 - `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managet within an external process. 
