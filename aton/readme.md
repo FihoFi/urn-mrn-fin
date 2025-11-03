@@ -113,7 +113,7 @@ urn:mrn:fin:aton:light:98765
 ## 11. Change Control
 
 - This specification is maintained by the namespace owner 
-- Historical URNs remain valid forever.
+- Any resources a URN within this namespace points to, might become temporarily or peramantently unavailable, or change substantially.
 
 ---
 
