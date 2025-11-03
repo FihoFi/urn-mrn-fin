@@ -9,7 +9,7 @@ This specification defines the subnamespace
 ```
 urn:mrn:fin:aton:
 ```
-for use in identifying XXX.
+for use in identifying Finnish Aids to Navigation and other aspects related to these Aids.
 
 - **Scope:** Persistent, globally unique identifiers for Aids to Navigation and related equipment.  
 - **Out of scope:** Aids to Navigation which are not given an identifier by FTIA and components of equipment not covered within a sub-namespace.
