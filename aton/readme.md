@@ -28,9 +28,8 @@ for use in identifying Finnish Aids to Navigation and other aspects related to t
 
 
 **General form:**
-
-```
 <!--ADD: general form description
+```
 "urn:mrn:fin:aton:" <aspect> ":" <identifier>
 ```
 
@@ -97,8 +96,8 @@ light-identifier = alphanum
 
 ## 9. Examples
 
-```
 <!--ADD: examples-->
+```
 Identification of Aids to Navigation using the national number:
 urn:mrn:fin:aton:id:12345
 
