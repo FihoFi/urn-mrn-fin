@@ -33,7 +33,15 @@ for use in identifying Finnish Aids to Navigation and other aspects related to t
 **Segments:**
 - `<aspect>` - The aspect defines the particular aspect or characteristic of an Aids to Navigation. The aspect might be identifiaction of the AtoN itself, or a structure, equipment or any other component or characteristic. Only aspects defined within this documentation can be used.
   
-- `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managet within an external process. 
+- `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managet within an external process.
+
+### Defined aspect and identifier combinations
+
+| aspect      |identifier         | notes        |
+|-------------|-------------------|-----------------------|
+| id          | aton-number       | Identifies an Aids to Navigation by the national AtoN- number.     |
+| light       | light-identifier  | Identifies a Light by the number in the national register. |
+
 
 ---
 
