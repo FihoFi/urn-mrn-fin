@@ -35,7 +35,7 @@ A producer code owner, shall provide an explicit specification of the requested 
 **General form:**
 <!--ADD: general form description-->
 ```
-urn:mrn:fin:navwarn:<PCODE>:<PSS>
+urn:mrn:fin:producer:<PCODE>:<PSS>
 ```
 
 **Segments:**
