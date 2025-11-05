@@ -82,8 +82,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 - **Persistence:** According to IHO S-62 Producer Code register
 
 >[!NOTE]
->Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, a Producer Specific Namespace cannot be used until the specified documentation is added to urn:mrn:fin documentation in https://fiho.fi/mrn. This process is initiated by the producer code owner, by providing an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository. Once established, updates to documentation can also be through pull-requests.
->
+>Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, a Producer Specific Namespace cannot be used until the specified documentation is added to urn:mrn:fin documentation in https://fiho.fi/mrn. This process is initiated by the producer code owner, by providing an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository.
 ---
 
 ## 6. Lifecycle
