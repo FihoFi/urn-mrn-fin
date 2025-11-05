@@ -176,7 +176,7 @@ When a component within a definition permits the colon character (:) in its valu
 ### Explicit ABNF definition
 In cases where a namespace allows for subsequent namespaces to be created, by defining a component allowing the use of colon (:), each allowed sub-namespace must be explicitly defined according to the rules set up for documenting and defining URN and MRN- namespaces. Each subsequent namespace within such a hierarchy must be either explicitlyor implicitly defined before it can be used.
 
-Example: The Producer Specific Namespace String (PSS) allows the use of colon, which indicates the possible formation of additional namespaces. Therefore, each urn:mrn:fin:producer:<PCODE> namespace must be furtherexplicitly defined before use.
+Example: The Producer Specific Namespace String (PSS) allows the use of colon, which indicates the possible formation of additional namespaces. Therefore, each "urn:mrn:fin:producer:" PCODE namespace must be explicitly defined before use.
 
 ```
 producer = "urn:mrn:fin:producer:" PCODE ":" PSS
