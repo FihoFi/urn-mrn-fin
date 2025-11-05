@@ -8,7 +8,7 @@ The use of urn:mrn:fin enables:
 * Interoperability across systems and platforms
 * Consistent management both within Finland and in global contexts
 
-Main namespace documentation is available at: https://github.com/FihoFi/urn-mrn-fin/
+Main namespace documentation is available at: https://fiho.fi/mrn
 
 ## 1. Purpose and Scope
 
@@ -42,7 +42,7 @@ for use in identifying Finnish Maritime Resources.
 ### Assignment of sub-namespaces to stakeholders
 Sub-namespaces of urn:mrn:fin can be made available for stakeholders based on request, and assigned based on case-by-case consideration.
 >[!NOTE]
->The application process is initiated by providing an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository. 
+>The application process is initiated by providing an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository. Once established, updates to documentation can also be through pull-requests.
 
 ---
 
@@ -182,7 +182,7 @@ TBD
 ```
 	
 ### Implicit ABNF definition
-Implicit ABNF definition means, that additional sub-namespaces are defined as separate components within the top-level rule of the ABNF definition of a namespace. Implicit definition is used in cases, where a rule-based approach for namespacing is needed. When implicit definition is used, the components cannot allow the use of colon (:) wihtin the string.
+Implicit ABNF definition means, that additional sub-namespaces are defined as separate components within the top-level rule of the ABNF definition of a namespace. Implicit definition is used in cases, where a rule-based approach for namespacing is needed. When implicit definition is used, the components cannot allow the use of colon (:) within the string.
 
 Example: The namespace urn:mrn:fin:navwarn implicitly defines sub-namespaces separated by colon (:). The top-level definition should contain the needed guidance on using all the sub-namespaces the definition allows for. 
 
@@ -194,7 +194,7 @@ year       = 4DIGIT
 number     = 1*DIGIT
 ```
 
-In the example above, the MRN "urn:mrn:fin:navwarn:FI01" is both a resource name used to identify a producer of Navigational Warnings in Finland, and a namespace for identifiers of Navigtional Warnings provided by the producer. Each series similarily becomes a namespace for resource names identifying the years when Navigational Warnings within the series were published etc.
+In the example above, the MRN "urn:mrn:fin:navwarn:FI01" is both a resource name used to identify a producer of Navigational Warnings in Finland, and a namespace for identifiers of Navigational Warnings provided by the producer. Each series similarily becomes a namespace for resource names identifying the years when Navigational Warnings within the series were published etc.
 
 ## 13. References
 
