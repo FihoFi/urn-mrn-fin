@@ -112,17 +112,18 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 <!--ADD: examples-->
 
 >[!Caution]
->The below are imaginary examples, that would follow the rules of a specific documentation provided for the namespaces urn:mrn:fin:producer:FI00 and urn:mrn:fin:producer:FI01 by the respective IHO S-62 Producer Code owners.
+>The below are **imaginary examples**, that would follow the rules of a specific documentation provided for the namespaces urn:mrn:fin:producer:FI00, urn:mrn:fin:producer:FI01 and urn:mrn:fin:producer:FI11 by the respective IHO S-62 Producer Code owners.
 
 ```
 urn:mrn:fin:producer:FI00:FOID:12345ABCD
 urn:mrn:fin:producer:FI00:enc:FI98765
 urn:mrn:fin:producer:FI01:navwarn:LC:2025:55
+urn:mrn:fin:producer:FI11:observation:66543
 ```
 ---
 
 ## 10. Security and Privacy
-
+TBD
 ---
 
 ## 11. Change Control
