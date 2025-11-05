@@ -29,9 +29,8 @@ for use in identifying any resources assigned and further specified by a (Finnis
 
 
 **General form:**
-
-```
 <!--ADD: general form description-->
+```
 urn:mrn:fin:navwarn:<PCODE>:<PSS>
 ```
 
