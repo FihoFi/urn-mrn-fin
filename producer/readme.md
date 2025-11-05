@@ -1,6 +1,9 @@
-# URN:MRN:FIN:<NID>:
+# URN:MRN:FIN:PRODUCER:
 <!--ADD: Date updated-->
 Updated: 2025-11-05
+
+> [!WARNING]
+> **DRAFT** — This content is under active development and may change without notice.
 
 ## 1. Purpose and Scope
 
@@ -85,7 +88,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 - **Uniqueness rule:** According to rules set by IHO for use in the S-62 Producer Code register
 - **Persistence:** According to IHO S-62 Producer Code register
 
->[!NOTE]
+>[!TIP]
 >Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, a Producer Specific Namespace cannot be used until specific documentation is provided and added to urn:mrn:fin:producer documentation in https://fiho.fi/mrn.
 **Check Part 2 in this document for further guidance.**
 ---
