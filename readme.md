@@ -184,7 +184,7 @@ TBD
 ### Implicit ABNF definition
 Implicit ABNF definition means, that additional sub-namespaces are defined as separate components within the top-level rule of the ABNF definition of a namespace. Implicit definition is used in cases, where a rule-based approach for namespacing is needed. When implicit definition is used, the components cannot allow the use of colon (:) within the string.
 
-Example: The namespace urn:mrn:fin:navwarn implicitly defines sub-namespaces separated by colon (:). The top-level definition should contain the needed guidance on using all the sub-namespaces the definition allows for. 
+Example: The namespace urn:mrn:fin:navwarn implicitly defines sub-namespaces separated by colon (:). The top-level definition should contain the needed guidance on using all the sub-namespaces the definition allows for. In case some of the sub-namespaces are optional, this must be formally described using corresponding ABNF- notation. 
 
 ```
 fi-navwarn = "urn:mrn:fin:navwarn:" producer ":" series ":" year ":" number
