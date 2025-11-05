@@ -122,7 +122,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 ## 7. Resolution
 
-TBD
+- Resolution is currently not implemented.
 <!--
 URNs may be mapped to HTTP resources using this template:
 
