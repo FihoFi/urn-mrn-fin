@@ -171,14 +171,25 @@ TBD
 
 **Each namespace, including sub-namespaces, shall have a defined owner, who is responsible for defining the purpose, scope and management of the namespace.** All namespaces within urn:mrn:fin shall be formally defined using a common template and including the formal **Augmented Backus–Naur Form (ABNF)**.
 
-When a comonent within a definition permits the colon character (:) in its value, this MUST NOT be used in such a way, that a un-documented namespace is formed. Use of the colon (:) is allowed when a sub-namespace is explicitly defined and documented, or implicit within the top-level rule of the definition.
+When a component within a definition permits the colon character (:) in its value, this MUST NOT be used in such a way, that a un-documented namespace is formed. Use of the colon (:) is allowed when a sub-namespace is explicitly defined and documented, or implicit within the top-level rule of the definition.
 
 ### Explicit ABNF definition
 In cases where a namespace allows for subsequent namespaces to be created, by defining a component allowing the use of colon (:), each allowed sub-namespace must be explicitly defined according to the rules set up for documenting and defining URN and MRN- namespaces. Each subsequent namespace within such a hierarchy must be either explicitlyor implicitly defined before it can be used.
 
-Example:
+Example: The Producer Specific Namespace String (PSS) allows the use of colon, which indicates the possible formation of additional namespaces. Therefore, each urn:mrn:fin:producer:<PCODE> namespace must be furtherexplicitly defined before use.
+
 ```
-TBD 
+producer = "urn:mrn:fin:producer:" PCODE ":" PSS
+
+;Producer code (PCODE)
+PCODE = 4alphanum
+       ; exactly 4 alphanumeric characters
+       
+;Producer Specific Namespace String (PSS)
+PSS = pchar *(pchar / "/")
+      ; May contain colons (":") to form sub-components
+      ; Despite allowing colon, only explicitly defined sub-namespaces are allowed
+      ; Each producer must provide additional documentation to define the sub-namespaces allowed within the PSS  
 ```
 	
 ### Implicit ABNF definition
