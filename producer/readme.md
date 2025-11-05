@@ -22,6 +22,10 @@ for use in identifying any resources assigned and further specified by a (Finnis
 - **Contact:** stefan.engstrom@traficom.fi / mikko.hovi@traficom.fi
 - **Change control:** The namespace owner maintains this specificaton, including changes and rules for assigning identifiers.
 
+### Assignment of sub-namespaces to IHO Producer Code owners
+Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, **a Producer Specific Namespace cannot be used until the specified documentation is added to urn:mrn:fin documentation** in https://fiho.fi/mrn.
+
+A producer code owner, shall provide an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once validated and established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository.
 
 ---
 
@@ -82,7 +86,8 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 - **Persistence:** According to IHO S-62 Producer Code register
 
 >[!NOTE]
->Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, a Producer Specific Namespace cannot be used until the specified documentation is added to urn:mrn:fin documentation in https://fiho.fi/mrn. This process is initiated by the producer code owner, by providing an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository.
+>Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, a Producer Specific Namespace cannot be used until specific documentation is provided and added to urn:mrn:fin:producer documentation in https://fiho.fi/mrn.
+**Check Part 2 in this document for further guidance.**
 ---
 
 ## 6. Lifecycle
