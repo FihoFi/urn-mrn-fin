@@ -3,7 +3,7 @@
 Updated: 2025-11-05
 
 > [!WARNING]
-> **DRAFT** — This content is under active development and may change without notice.
+> **DRAFT** — This content is under active development and shall be considered a draft only.
 
 ## 1. Purpose and Scope
 
@@ -111,8 +111,8 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 ## 9. Examples
 <!--ADD: examples-->
 
->[!NOTE]
->Imaginary examples, that would follow the specific documentation provided for the namespaces urn:mrn:fin:producer:FI00 and urn:mrn:fin:producer:FI01 by the respective owners.
+>[!Caution]
+>The below are imaginary examples, that would follow the rules of a specific documentation provided for the namespaces urn:mrn:fin:producer:FI00 and urn:mrn:fin:producer:FI01 by the respective IHO S-62 Producer Code owners.
 
 ```
 urn:mrn:fin:producer:FI00:FOID:12345ABCD
