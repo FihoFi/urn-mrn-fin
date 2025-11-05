@@ -23,7 +23,7 @@ for use in identifying any resources assigned and further specified by a (Finnis
 - **Change control:** The namespace owner maintains this specificaton, including changes and rules for assigning identifiers.
 
 ### Assignment of sub-namespaces to IHO Producer Code owners
-Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, due to the requirement for provision of documentation of all MRN-namsespaces, **a Producer Specific Namespace cannot be used until the specified documentation is added to urn:mrn:fin documentation** in https://fiho.fi/mrn.
+Each (Finnish) owner of a valid producer code within the IHO S-62 Producer Code register is automatically the owner of the corresponding namespace within the namespace urn:mrn:fin:producer:<PCODE>. Anyway, **a Producer Specific Namespace cannot be used until the specific documentation is added to urn:mrn:fin documentation** in https://fiho.fi/mrn.
 
 A producer code owner, shall provide an explicit specification of the requested namespace, using the [markdown specification template](https://github.com/FihoFi/urn-mrn-fin/blob/main/template.md?plain=1), and sending it by email to above points of contact. Once validated and established, the specificaiton of a new sub-namespace will be added as an explicit definition within a subfolder to this repository.
 
@@ -108,7 +108,13 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 ## 9. Examples
 <!--ADD: examples-->
 
+>[!NOTE]
+>Imaginary examples, that would follow the specific documentation provided for the namespaces urn:mrn:fin:producer:FI00 and urn:mrn:fin:producer:FI01 by the respective owners.
+
 ```
+urn:mrn:fin:producer:FI00:FOID:12345ABCD
+urn:mrn:fin:producer:FI00:enc:FI98765
+urn:mrn:fin:producer:FI01:navwarn:LC:2025:55
 ```
 ---
 
@@ -118,7 +124,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 ## 11. Change Control
 
-- This specification is maintained by the namespace owner 
+- This specification is maintained by the namespace owner, sub-namespaces are maintained by the respective owners.
 - Historical URNs remain valid forever.
 
 ---
