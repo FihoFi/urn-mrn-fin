@@ -90,6 +90,7 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 ## 7. Resolution
 <!--ADD: resolution data-->
+- Resolution is not implemented.
 ---
 
 ## 8. Syntax & Comparison Rules
@@ -98,9 +99,10 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 ---
 
 ## 9. Examples
+<!--ADD: examples-->
 
 ```
-<!--ADD: examples-->
+```
 ---
 
 ## 10. Security and Privacy
@@ -116,5 +118,6 @@ HEXDIG      = DIGIT / "A" / "B" / "C" / "D" / "E" / "F"
 
 ## 12. References
 
-- https://github.com/FihoFi/urn-mrn-fin/
+- https://fiho.fi/mrn
+
 <!--ADD: additiona references-->
