@@ -1,5 +1,4 @@
 # URN:MRN:FIN:NAVWARN:
-Updated: 2025-10-23
 
 ## 1. Purpose and Scope
 
@@ -32,13 +31,13 @@ urn:mrn:fin:navwarn:<producer>:<series>:<year>:<number>
 
 **Segments:**
 
-- `<producer>` — the IHO S-62 / S-100  producer code of the producer (FI01 for Turku Radio / Traficom).  
+- `<producer>` — the IHO S-62 / S-100  producer code of the producer (FI05 for Turku Radio / Traficom).  
 - `<series>` — a code defining the series of a Navigational Warning
 - `<year>` — four-digit Gregorian year (`YYYY`).  
 - `<number>` — sequential number within the series and year. Number formatting including the use of leading zeroes must be consistent within the parent namespace (year).
 
 >[!NOTE]
->The resource name is formed by providing all defined components, separated by colon. Currently only one producer (FI01) is recognized. Each series must be defined by at least one character or digit, and the year provided using four digits (2025, 2026 etc.). The number may contain only digits.
+>The resource name is formed by providing all defined components, separated by colon. Currently only one producer (FI05) is recognized. Each series must be defined by at least one character or digit, and the year provided using four digits (2025, 2026 etc.). The number may contain only digits.
 ---
 
 ## 4. Syntax Definition
@@ -46,7 +45,7 @@ urn:mrn:fin:navwarn:<producer>:<series>:<year>:<number>
 **ABNF:**
 ```
 fi-navwarn = "urn:mrn:fin:navwarn:" producer ":" series ":" year ":" number
-producer   = "FI01"
+producer   = "FI05"
 series     = 1*(ALPHA / DIGIT / "-")
 year       = 4DIGIT
 number     = 1*DIGIT
@@ -106,9 +105,9 @@ The endpoint SHOULD provide both machine-readable (JSON) and human-readable (HTM
 ## 9. Examples
 
 ```
-urn:mrn:fin:navwarn:FI01:LC:2025:17
-urn:mrn:fin:navwarn:FI01:VV:2025:42
-urn:mrn:fin:navwarn:FI01:LC:2025:18
+urn:mrn:fin:navwarn:FI05:LC:2025:17
+urn:mrn:fin:navwarn:FI05:VV:2025:42
+urn:mrn:fin:navwarn:FI05:LC:2025:18
 ```
 
 ---
