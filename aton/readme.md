@@ -1,6 +1,6 @@
 # URN:MRN:FIN:ATON:
 <!--ADD: Date updated-->
-Updated: 2025-11-03
+Updated: 2026-01-15
 
 ## 1. Purpose and Scope
 
@@ -18,7 +18,7 @@ for use in identifying Finnish Aids to Navigation and other aspects related to t
 
 ## 2. Authority
 <!--ADD: owner and point of contact-->
-- **Namespace owner:** Finnish Transport Infrastructure Agenct (FTIA)  
+- **Namespace owner:** Finnish Transport Infrastructure Agency (FTIA)  
 - **Contact:** tuomas.martikainen@vayla.fi 
 - **Change control:** The namespace owner maintains this specificaton, including changes and rules for assigning identifiers.
 
@@ -31,9 +31,9 @@ for use in identifying Finnish Aids to Navigation and other aspects related to t
 "urn:mrn:fin:aton:" <aspect> ":" <identifier>
 ```
 **Segments:**
-- `<aspect>` - The aspect defines the particular aspect or characteristic of an Aids to Navigation. The aspect might be identifiaction of the AtoN itself, or a structure, equipment or any other component or characteristic. Only aspects defined within this documentation can be used.
+- `<aspect>` - The aspect defines the particular aspect or characteristic of an Aids to Navigation. The aspect might be identification of the AtoN itself, or a structure, equipment or any other component or characteristic. Aspects can be added, and only aspects defined within this documentation should be used.
   
-- `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managet within an external process.
+- `<identifier>` - The identifier that uniquely identifies the given aspect. Each aspect has its own set of identifiers, which are manily managed within an external process.
 
 ### Defined aspect and identifier combinations
 
@@ -63,13 +63,15 @@ identifier   = aton-number / light-identifier
 
 aton-number      = alphanum
        ; aton-number is used with aspect: id
-       ; the aton-number is the numbr given by FTIA to any AidsToNavigation within the national AtoN- database
-       ; rules for assigning and uniqueness follows those the external process of assigning numbers
+       ; the aton-number is the number given by FTIA to an AidsToNavigation within the national AtoN- database
+       ; rules for assigning and uniqueness follows the external process set up by FTIA
+       ; aton-number is a positive integer expressed without leading zeros
 
 light-identifier = alphanum
        ; light-identifier is used with aspect: light
-       ; the light-identifier is the kinternal number given to a light within the national AtoN- database
-       ; rules for assigning and uniqueness follows those the external process of assigning numbers
+       ; the light-identifier is the number given by FTIA to a light within the national AtoN- database
+       ; rules for assigning and uniqueness follows the external process set up by FTIA
+       ; light-identifier is a positive integer expressed without leading zeros
 ```
 
 ## 5. Assignment & Uniqueness
@@ -95,6 +97,7 @@ light-identifier = alphanum
 ## 8. Syntax & Comparison Rules
 
 - Identifiers are case-insensitive
+- Numeric identifiers are generally expressed without (non‑significant) leading zeros
 ---
 
 ## 9. Examples
@@ -115,7 +118,7 @@ urn:mrn:fin:aton:light:98765
 
 ## 11. Change Control
 
-- This specification is maintained by the namespace owner 
+- This specification is maintained by the namespace owner with support by the OID-owner.
 - Any resources a URN within this namespace points to, might become temporarily or peramantently unavailable, or change substantially.
 
 ---
